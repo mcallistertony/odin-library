@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Book Library</title>
+        <meta charset="UTF-8">
+        <link href="css/reset.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header>
+            <div id="library-log-container">
+                <h3>Library Log</h3>
+                <div id="log-content-container">
+                    <div id="library-log-feature">
+                        <p class="tiny-font">books</p>
+                        <p class="large-bold"id="totalBooksCount">0</p>
+                    </div>
+                    <div id="library-log-feature">
+                        <p class="tiny-font">read</p>
+                        <p class="large-bold" id="readBooksCount">0</p>
+                    </div>
+                    <div id="library-log-feature">
+                        <p class="tiny-font">Not Read</p>
+                        <p class="large-bold" id="notReadBooksCount">0</p>
+                    </div>
+                </div>
+            </div>
+            <h1>My Book Library</h1>
+            <div id="order-by-container">
+                <p>Order By:</p>
+                <select name="order-name" id="order-by-select">
+                    <option value="date">Date</option>
+                    <option selected value="name">Name</option>
+                </select>
+                <select name="order-date" id="order-date">
+                    <option value="desc">DESC.</option>
+                    <option selected value="asc">ASC.</option>
+                </select>
+            </div>
+            <hr>
+        </header>
+        <main>
+            <div id="add-new-opacity">
+                <div id="add-new-modal">
+                    <button id="modal-close-btn">+</button>
+                    <h2>Add a New Book</h2>
+                    <form action="/">
+                        <label for="book-title">Book Title*
+                            <input type="text" placeholder="Title" id="title-input" class="modal-input">
+                        </label>
+                        <label for="book-title">Book Author*
+                            <input type="text" placeholder="Author" id="author-input" class="modal-input">
+                        </label>
+                        <label for="book-title">Number of Pages*
+                            <input type="number" placeholder="Number of Pages" id="pages-input" class="modal-input">
+                        </label>
+                        <label for="book-title">Language*
+                            <input type="text" placeholder="Language" id="language-input" class="modal-input">
+                        </label>
+                        <label for="book-title">Book Status*
+                            <select id="read-input" class="modal-input">
+                                <option selected disabled>Did you read this book?</option>
+                                <option value="read">read</option>
+                                <option value="not-read">not read</option>
+                            </select>
+                        </label>
+                        <input type="button" id="modal-add-btn" value="add">
+                    </form>
+                </div>
+            </div>
+            <div id="book-grid"></div>
+            <button id="add-book-btn">+</button>
+        </main>
+    </body>
+    <script src="js/main.js"></script>
+</html>
